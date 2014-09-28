@@ -1,0 +1,143 @@
+Last login: Fri Sep 26 09:19:28 on ttys001
+ GA General Assembly  Web Development Immersive 
+------------------------------------------
+git version 2.1.0
+Homebrew 0.9.5
+ruby 2.1.2p95 (2014-05-08 revision 45877) [x86_64-darwin13.0]
+psql (PostgreSQL) 9.3.5
+Rails 4.1.6
+heroku-toolbelt/3.11.2 (x86_64-darwin13.0) ruby/2.1.2
+------------------------------------------
+type unwelcome to remove this message
+stacybanks ~
+$ ls
+Applications/  Documents/  Library/  Music/     Public/  src/
+Desktop/       Downloads/  Movies/   Pictures/  dev/     temp/
+stacybanks ~
+$ cd dev
+stacybanks ~/dev
+$ ls
+Practice/  wdi/
+stacybanks ~/dev
+$ cd Practice/
+stacybanks ~/dev/Practice
+$ mkdir Websites
+mkdir: created directory ‘Websites’
+stacybanks ~/dev/Practice
+$ ls
+Websites/
+stacybanks ~/dev/Practice
+$ cd Websites/
+stacybanks ~/dev/Practice/Websites
+$ git init
+Initialized empty Git repository in /Users/stacybanks/dev/Practice/Websites/.git/
+stacybanks ~/dev/Practice/Websites on master
+$ git status
+On branch master
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	WebSiteTest.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+stacybanks ~/dev/Practice/Websites on master
+$ git add WebSiteTest.html
+stacybanks ~/dev/Practice/Websites on master
+$ git status
+On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+	new file:   WebSiteTest.html
+
+stacybanks ~/dev/Practice/Websites on master
+$ git commit -m "WebSiteTest for Git, Sunday 9/28/14."
+[master (root-commit) d2eb4b0] WebSiteTest for Git, Sunday 9/28/14.
+ 1 file changed, 11 insertions(+)
+ create mode 100644 WebSiteTest.html
+stacybanks ~/dev/Practice/Websites on master
+$ git status
+On branch master
+nothing to commit, working directory clean
+stacybanks ~/dev/Practice/Websites on master
+$ cd ..
+stacybanks ~/dev/Practice
+$ git status
+fatal: Not a git repository (or any of the parent directories): .git
+stacybanks ~/dev/Practice
+$ git init
+Initialized empty Git repository in /Users/stacybanks/dev/Practice/.git/
+stacybanks ~/dev/Practice on master
+$ git remote add origin https://github.com/stacybanks514/Practice.git
+stacybanks ~/dev/Practice on master
+$ git push -u origin master
+error: src refspec master does not match any.
+error: failed to push some refs to 'https://github.com/stacybanks514/Practice.git'
+stacybanks ~/dev/Practice on master
+$ git remote add origin https://github.com/stacybanks514/Practice.git
+fatal: remote origin already exists.
+stacybanks ~/dev/Practice on master
+$ git push -u origin master
+error: src refspec master does not match any.
+error: failed to push some refs to 'https://github.com/stacybanks514/Practice.git'
+stacybanks ~/dev/Practice on master
+$ ls
+Build_a_band.rb  Websites/
+stacybanks ~/dev/Practice on master
+$ git add Build_a_band.rb
+stacybanks ~/dev/Practice on master
+$ git commit -m "WDI practice ruby, build a band.rb."
+[master (root-commit) b31e322] WDI practice ruby, build a band.rb.
+ 1 file changed, 99 insertions(+)
+ create mode 100644 Build_a_band.rb
+stacybanks ~/dev/Practice on master
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	Websites/
+
+nothing added to commit but untracked files present (use "git add" to track)
+stacybanks ~/dev/Practice on master
+$ git push -u origin master
+Username for 'https://github.com': stacybanks514
+Password for 'https://stacybanks514@github.com': 
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 1.11 KiB | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/stacybanks514/Practice.git
+ * [new branch]      master -> master
+Branch master set up to track remote branch master from origin.
+stacybanks ~/dev/Practice on master
+$ ls
+Build_a_band.rb  Websites/
+stacybanks ~/dev/Practice on master
+$ git add Websites/
+stacybanks ~/dev/Practice on master
+$ git commit -m "Websites folder in practice"
+[master b6311e3] Websites folder in practice
+ 1 file changed, 11 insertions(+)
+ create mode 100644 Websites/WebSiteTest.html
+stacybanks ~/dev/Practice on master
+$ git push -u origin master
+Username for 'https://github.com': stacybanks514	
+Password for 'https://stacybanks514@github.com': 
+Counting objects: 4, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 420 bytes | 0 bytes/s, done.
+Total 4 (delta 0), reused 0 (delta 0)
+To https://github.com/stacybanks514/Practice.git
+   b31e322..b6311e3  master -> master
+Branch master set up to track remote branch master from origin.
+stacybanks ~/dev/Practice on master
+$ 
