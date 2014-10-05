@@ -79,15 +79,18 @@ people = [
 
 # Who has the most money?
 # go through each hash, find the money key, order the values, return the first value
-
 # sorted = people.sort_by { |x| x[:money]}
 # puts sorted.last[:name]
-
-
-
-
-
+# OR
+# puts people.max_by{|x| x[:money]}
+# OR
+# a = people.max_by {|i| i[:money]}
+# puts "#{a[:name]} #{a[:money]}"
 
 # If we have at least 5 people that play instruments we can start a band. Can we?
+# music = people.sort_by {|musician| musician if musician[:plays_instrument] == true}
+# puts "#{music[:name]} can play an instrument."
 
 # If a new drum set costs $350, do we have enough money to buy one?
+
+
