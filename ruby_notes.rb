@@ -15,7 +15,7 @@
 # ARRAYS**ARRAYS**ARRAYS**ARRAYS**ARRAYS**ARRAYS**ARRAYS**ARRAYS**ARRAYS**ARRAYS**ARRAYS**ARRAYS**ARRAYS**ARRAYS**ARRAYS**
 # ARRAYS**ARRAYS**ARRAYS**ARRAYS**ARRAYS**ARRAYS**ARRAYS**ARRAYS**ARRAYS**ARRAYS**ARRAYS**ARRAYS**ARRAYS**ARRAYS**ARRAYS**
 # ARRAYS**ARRAYS**ARRAYS**ARRAYS**ARRAYS**ARRAYS**ARRAYS**ARRAYS**ARRAYS**ARRAYS**ARRAYS**ARRAYS**ARRAYS**ARRAYS**ARRAYS**
-# this is how you crete a new array:    []   or   Array.new
+# this is how you create a new array:    []   or   Array.new
 #
 # You can add integers and strings in an array: [1, 'two', 3, 'four', 5]
 # Arrays in Ruby allow you to store any kind of objects in any combination with no restrictions on type.
@@ -65,7 +65,7 @@
 # [1, 3, 5, 7, 9]
 #
 # For loops in arrays
-# array = [1, 2, 3, 4, 5]         (i is the placeholder in the for loop for all the elemnts in array)
+# array = [1, 2, 3, 4, 5]         (i is the placeholder in the for loop for all the elements in the array)
 # for i in array
 #   puts i
 # end
@@ -82,7 +82,7 @@
 # passing [1, 2, 3, 4, 5] to array_copy returns [1,2,3]
 # passing [-23, 12, 0, 19] to array_copy returns [-23, 0]
 #
-# The Array#each method accepts a block to which each element of the array is passed in turn.
+# The Array .each method accepts a block to which each element of the array is passed in turn.
 # array = [1, 2, 3, 4, 5]
 # array.each do |i|
 #   puts i
@@ -112,7 +112,6 @@
 # keys = "Jack", "Jill", "Bob"
 # values = 10,    12,     14
 #
-# restaurant_menu = { "Ramen" => 3, "Dal Makhani" => 4, "Tea" => 2}
 #
 # You can retrieve values from a Hash object using [] operator. The key of the required value should be enclosed within these square brackets.
 #
@@ -416,3 +415,119 @@
 #
 #
 #
+# MINITEST**MINITEST**MINTEST**MINITEST**MINITEST**MINTEST**MINITEST**MINITEST**MINTEST**MINITEST**MINITEST**MINTEST**MINITEST**MINITEST**MINTEST**
+# MINITEST**MINITEST**MINTEST**MINITEST**MINITEST**MINTEST**MINITEST**MINITEST**MINTEST**MINITEST**MINITEST**MINTEST**MINITEST**MINITEST**MINTEST**
+# MINITEST**MINITEST**MINTEST**MINITEST**MINITEST**MINTEST**MINITEST**MINITEST**MINTEST**MINITEST**MINITEST**MINTEST**MINITEST**MINITEST**MINTEST**
+# MINITEST**MINITEST**MINTEST**MINITEST**MINITEST**MINTEST**MINITEST**MINITEST**MINTEST**MINITEST**MINITEST**MINTEST**MINITEST**MINITEST**MINTEST**
+# MINITEST**MINITEST**MINTEST**MINITEST**MINITEST**MINTEST**MINITEST**MINITEST**MINTEST**MINITEST**MINITEST**MINTEST**MINITEST**MINITEST**MINTEST**
+# class Money
+#   def initialize(num1, num2)
+#     @num1 = num1
+#     @num2 = num2
+#   end
+#   def method(num1, num2)
+#     if num1 + num2 == 2
+#       puts "true!"
+#     else
+#       puts "false."
+#     end
+#   end
+# end
+
+
+
+# if $0 == __FILE__
+#   require 'minitest/autorun'
+
+#   describe Money do
+#     before  do
+#       puts @bill = Money.new(1,1)
+#     end
+
+#     describe "when 1 + 1 = 2" do
+#       it "adds num1 and num2" do
+#         @bill.method(1, 1).must_equal puts"true!" #replace this true with 2?
+#       end
+#     end
+#   end
+# end
+
+# I think its saying that the answer the method spits out is nil instead of "true!"
+# I think we have to change the method?
+# how did that make a difference?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+class Cell
+  def initialize(life)
+    @life = life
+  end
+
+  def life_status
+    if @life == false
+      reutrn false
+    elsif @life == 2
+      return true
+    end
+  end
+  def life_span
+    if @life > 3
+      return false
+    else
+      true
+    end
+  end
+end
+
+
+
+if $0 == __FILE__
+  require 'minitest/autorun'
+
+  describe Cell do
+    it "should return false if initialized with false" do
+      cell = Cell.new(false)
+      cell.life_status.must_equal false
+    end
+  end
+
+  describe Cell do
+    it "should die if num_of_neighbors > 3" do
+      cell = Cell.new(1)
+      cell.life_span.must_equal true
+    end
+  end
+  describe Cell do
+    it "should a live cell have < 2 neighbors it should die"
+    cell = Cell.new(2)
+    cell.life_status.must_equal true
+  end
+end
